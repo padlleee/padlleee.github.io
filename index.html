@@ -1,197 +1,130 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Creative Developer</title>
+    <title>Muhammad Zeldi Fadlillah | Portofolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2563eb;
-            --dark: #1e293b;
-            --light: #f8fafc;
-            --secondary: #64748b;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background: white;
-            padding: 2rem 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-links a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: var(--secondary);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .hero {
-            padding: 100px 10%;
-            text-align: center;
-            background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: opacity 0.3s;
-        }
-
-        .section {
-            padding: 80px 10%;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 40px;
-        }
-
-        .card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h3 {
-            margin-top: 0;
-            color: var(--primary);
-        }
-
-        .skills-tag {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tag {
-            background: #dbeafe;
-            color: var(--primary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--dark);
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            header { flex-direction: column; }
-            .nav-links { margin-top: 1rem; }
-        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(16, 185, 129, 0.1); }
+        .hero-gradient { background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent); }
     </style>
 </head>
-<body>
+<body class="bg-[#0b0f19] text-slate-200 font-sans selection:bg-emerald-500/30">
 
-    <header>
-        <div class="logo"><strong>DEV.</strong>PORTFOLIO</div>
-        <nav class="nav-links">
-            <a href="#about">Tentang</a>
-            <a href="#projects">Proyek</a>
-            <a href="#skills">Keahlian</a>
-        </nav>
-    </header>
+    <nav class="fixed w-full z-50 border-b border-emerald-500/10 bg-[#0b0f19]/80 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="font-bold text-xl tracking-tight text-emerald-400">PADLLEE<span class="text-white">.</span></span>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#profil" class="hover:text-emerald-400 transition">Profil</a>
+                <a href="#proyek" class="hover:text-emerald-400 transition">Proyek</a>
+                <a href="#sertifikat" class="hover:text-emerald-400 transition">Sertifikat</a>
+            </div>
+        </div>
+    </nav>
 
-    <section class="hero">
-        <h1>Halo, Saya [Nama Anda]</h1>
-        <p>Full-Stack Developer | UI/UX Designer | Videographer</p>
-        <br>
-        <a href="mailto:email@anda.com" class="btn">Hubungi Saya</a>
-    </section>
-
-    <section id="projects" class="section">
-        <h2 style="text-align: center;">Proyek Terpilih</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Sistem Informasi Manajemen</h3>
-                <p>Platform berbasis web untuk efisiensi administrasi dengan fitur dashboard real-time.</p>
-                <div class="skills-tag">
-                    <span class="tag">Laravel</span>
-                    <span class="tag">MySQL</span>
+    <section id="profil" class="pt-40 pb-20 px-6 hero-gradient">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <div class="inline-block px-3 py-1 rounded-full border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-6">
+                    Sistem Informasi @ Politeknik Negeri Subang
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Muhammad Zeldi Fadlillah</h1>
+                <p class="text-slate-400 text-lg leading-relaxed mb-8 max-w-lg">
+                    Mahir menyelaraskan fungsionalitas teknis dengan estetika visual untuk solusi digital yang optimal[cite: 7]. Berfokus pada Laravel dan Desain UI/UX[cite: 5].
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://instagram.com/AKUN_ANDA" class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 rounded-xl transition flex items-center gap-2 font-semibold">
+                        <i class="fab fa-instagram"></i> Video Karya
+                    </a>
+                    <a href="mailto:zeldifadillah@gmail.com" class="glass px-6 py-3 rounded-xl hover:bg-white/5 transition font-semibold">
+                        Kontak Saya
+                    </a>
                 </div>
             </div>
-            <div class="card">
-                <h3>UI/UX Design App</h3>
-                <p>Rancangan antarmuka pengguna yang fokus pada user experience dan aksesibilitas.</p>
-                <div class="skills-tag">
-                    <span class="tag">Figma</span>
-                    <span class="tag">Prototyping</span>
-                </div>
-            </div>
-            <div class="card">
-                <h3>Cinematic Short Film</h3>
-                <p>Produksi video kreatif dengan teknik pengambilan gambar dan editing profesional.</p>
-                <div class="skills-tag">
-                    <span class="tag">Premiere Pro</span>
-                    <span class="tag">Videography</span>
+            <div class="order-1 md:order-2 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-emerald-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <img src="profile.jpg" alt="Muhammad Zeldi Fadlillah" class="relative w-64 h-80 object-cover rounded-2xl grayscale hover:grayscale-0 transition duration-500">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section" style="background: #fff;">
-        <h2 style="text-align: center;">Keahlian Teknis</h2>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center;">
-            <div class="card">
-                <h4>Web Development</h4>
-                <p>PHP, JavaScript, React.js</p>
-            </div>
-            <div class="card">
-                <h4>Design</h4>
-                <p>UI/UX, Visual Branding</p>
-            </div>
-            <div class="card">
-                <h4>Multimedia</h4>
-                <p>Video Editing, Motion Graphics</p>
+    <section id="proyek" class="py-24 px-6 bg-[#0d131f]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                <span class="w-12 h-[2px] bg-emerald-500"></span> Pengalaman Proyek [cite: 11]
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass p-8 rounded-3xl group hover:border-emerald-500/40 transition">
+                    <span class="text-emerald-400 text-xs font-mono">2024 - Sekarang [cite: 13]</span>
+                    <h3 class="text-2xl font-bold text-white mt-2">SIMPA (Manajemen Panti) [cite: 12]</h3>
+                    <p class="text-slate-400 mt-4 text-sm leading-relaxed">
+                        Pengembangan sistem komprehensif dengan pengelolaan basis data (SIMPA_DB) untuk integritas data panti asuhan[cite: 15].
+                    </p>
+                    <div class="mt-6 flex gap-3">
+                        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-[10px] font-bold rounded-lg uppercase">Laravel [cite: 20]</span>
+                        <span class="px-3 py-1 bg-blue-500/10 text-blue-500 text-[10px] font-bold rounded-lg uppercase">Database Design [cite: 21]</span>
+                    </div>
+                </div>
+
+                <div class="glass p-8 rounded-3xl group hover:border-emerald-500/40 transition text-right">
+                    <span class="text-emerald-400 text-xs font-mono">2025 [cite: 17]</span>
+                    <h3 class="text-2xl font-bold text-white mt-2">SI PISANG (UMKM) [cite: 16]</h3>
+                    <p class="text-slate-400 mt-4 text-sm leading-relaxed">
+                        Desain antarmuka (UI/UX) khusus untuk optimalisasi sistem informasi UMKM di desa Cibogo[cite: 18].
+                    </p>
+                    <div class="mt-6 flex gap-3 justify-end">
+                        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-[10px] font-bold rounded-lg uppercase">UI/UX [cite: 22]</span>
+                        <span class="px-3 py-1 bg-pink-500/10 text-pink-500 text-[10px] font-bold rounded-lg uppercase">Figma [cite: 22]</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Portfolio. Dibuat dengan dedikasi.</p>
+    <section id="sertifikat" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Pencapaian & Prestasi [cite: 23]</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass rounded-2xl overflow-hidden p-4">
+                    <img src="cert1.jpg" class="w-full h-40 object-cover rounded-xl mb-4 opacity-70 hover:opacity-100 transition">
+                    <h4 class="font-bold text-emerald-400">Juara 1 [cite: 24]</h4>
+                    <p class="text-xs text-slate-400">Kompetisi Film Pendek Internasional [cite: 24]</p>
+                </div>
+                
+                <div class="glass rounded-2xl overflow-hidden p-4">
+                    <img src="cert2.jpg" class="w-full h-40 object-cover rounded-xl mb-4 opacity-70 hover:opacity-100 transition">
+                    <h4 class="font-bold text-emerald-400">Juara 3 [cite: 25]</h4>
+                    <p class="text-xs text-slate-400">UI/UX Designer Tingkat Perguruan Tinggi [cite: 25]</p>
+                </div>
+
+                <div class="glass rounded-2xl border-dashed border-2 border-emerald-500/20 flex flex-col items-center justify-center p-6 text-center">
+                    <i class="fas fa-plus text-emerald-500/40 text-2xl mb-2"></i>
+                    <p class="text-xs text-slate-500">Tambah Sertifikat Baru</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-emerald-500/10 text-center text-slate-500 text-sm">
+        <p>© 2026 Muhammad Zeldi Fadlillah. Dibuat untuk Portofolio Profesional.</p>
     </footer>
 
+    <script>
+        // Javascript untuk interaksi scroll navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-[#0b0f19]/95');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+    </script>
 </body>
 </html>
