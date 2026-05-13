@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --secondary: #64748b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            padding: 100px 10%;
+            text-align: center;
+            background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: opacity 0.3s;
+        }
+
+        .section {
+            padding: 80px 10%;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .skills-tag {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #dbeafe;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--dark);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; }
+            .nav-links { margin-top: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><strong>DEV.</strong>PORTFOLIO</div>
+        <nav class="nav-links">
+            <a href="#about">Tentang</a>
+            <a href="#projects">Proyek</a>
+            <a href="#skills">Keahlian</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Halo, Saya [Nama Anda]</h1>
+        <p>Full-Stack Developer | UI/UX Designer | Videographer</p>
+        <br>
+        <a href="mailto:email@anda.com" class="btn">Hubungi Saya</a>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 style="text-align: center;">Proyek Terpilih</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Sistem Informasi Manajemen</h3>
+                <p>Platform berbasis web untuk efisiensi administrasi dengan fitur dashboard real-time.</p>
+                <div class="skills-tag">
+                    <span class="tag">Laravel</span>
+                    <span class="tag">MySQL</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>UI/UX Design App</h3>
+                <p>Rancangan antarmuka pengguna yang fokus pada user experience dan aksesibilitas.</p>
+                <div class="skills-tag">
+                    <span class="tag">Figma</span>
+                    <span class="tag">Prototyping</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Cinematic Short Film</h3>
+                <p>Produksi video kreatif dengan teknik pengambilan gambar dan editing profesional.</p>
+                <div class="skills-tag">
+                    <span class="tag">Premiere Pro</span>
+                    <span class="tag">Videography</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section" style="background: #fff;">
+        <h2 style="text-align: center;">Keahlian Teknis</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center;">
+            <div class="card">
+                <h4>Web Development</h4>
+                <p>PHP, JavaScript, React.js</p>
+            </div>
+            <div class="card">
+                <h4>Design</h4>
+                <p>UI/UX, Visual Branding</p>
+            </div>
+            <div class="card">
+                <h4>Multimedia</h4>
+                <p>Video Editing, Motion Graphics</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Portfolio. Dibuat dengan dedikasi.</p>
+    </footer>
+
+</body>
+</html>
